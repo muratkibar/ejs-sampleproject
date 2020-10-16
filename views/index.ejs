@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS Quick Workshop</title>
+</head>
+
+<body>
+    <ul>
+        <% for(var person of people){ %>
+            <% if (person.name === 'John') { %>
+                <li>The name is correct and it is
+                    <%= person.name %>
+                        !
+                </li>
+                <% } else {%>
+                    <li>Other name is incorrect and it is not John, it is
+                        <%=  person.name %> !!!
+                    </li>
+                    <% } %>
+                        <% } %>
+    </ul>
+    <%- include('about')  %>
+</body>
+
+</html>
